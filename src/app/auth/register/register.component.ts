@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
     if (this.registroForm.valid) {
       this.authService
         .crearUsuario(nombre, correo, password)
-        .then((credenciales) => {
+        .then(() => {
           Swal.close();
           this.router.navigateByUrl('/login');
         })
